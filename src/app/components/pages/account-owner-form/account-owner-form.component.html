@@ -1,0 +1,188 @@
+<div class="form-container">
+    <div class="form-header">
+        <H4>Identificação do titular da conta</H4>
+        <span class="secondary">Confirme as informações obtidas para o cadastro e atualize os dados se necessário</span>
+    </div>
+
+    <span class="bold">DADOS PESSOAIS</span>
+
+    <div class="row">
+        <form [formGroup]="form">
+            <div class="row no-margin no-padding">
+                <div class="col-md-3 input-container no-margin no-padding">
+                    <div class="client-picutre-container">
+                        <label>Foto do cooperado <span class="secondary">(opcional)</span></label>
+                        <img src="{{ client.pictureSource }}" [class.hide-img]="!client.pictureSource">
+                        <button *ngIf="!client.pictureSource" (click)="loadClientPicture()"
+                            class="btn-secondary btn-small">Capturar imagem</button>
+                        <button *ngIf="client.pictureSource" class="btn-tertiary btn-small">Excluir</button>
+                    </div>
+                </div>
+
+                <div class="col-md-9 no-margin no-padding">
+                    <div class="row">
+
+                        <div class="col-md-8 input-container">
+                            <label>Nome completo</label>
+                            <input type="text" name="nome" formControlName="nome">
+                        </div>
+
+                        <div class="col-md-4 input-container">
+                            <label>Como gosta de ser chamado <span class="secondary">(opcional)</span></label>
+                            <input type="text" name="apelido" formControlName="apelido">
+                        </div>
+
+                        <div class="col-md-4 input-container">
+                            <label>Data de nascimento</label>
+                            <input type="text" name="dataNascimento" formControlName="dataNascimento">
+                        </div>
+
+                        <div class="col-md-4 input-container">
+                            <label>Capacidade civil</label>
+                            <select name="capacidadeCivil" formControlName="capacidadeCivil">
+                                <option *ngFor="let capacity of capacities" [value]="capacity.id">
+                                    {{capacity.description}}</option>
+                            </select>
+                        </div>
+
+                        <div class="col-md-4 input-container">
+                            <label>Data de emancipação</label>
+                            <input type="text" name="dataEmancipacao" formControlName="dataEmancipacao">
+                        </div>
+
+                        <div class="col-md-4 input-container">
+                            <label>Estado civil</label>
+                            <select name="estadoCivil" formControlName="estadoCivil">
+                                <option>Option 1</option>
+                                <option>Option 2</option>
+                                <option>Option 3</option>
+                            </select>
+                        </div>
+
+                        <div class="col-md-4 input-container">
+                            <label>Pessoa com deficiência</label>
+                            <select name="isPCD" formControlName="isPCD">
+                                <option>Option 1</option>
+                                <option>Option 2</option>
+                                <option>Option 3</option>
+                            </select>
+                        </div>
+
+                        <div class="col-md-4 input-container">
+                            <label>Necessidade</label>
+                            <input type="text" name="necessidade" formControlName="necessidade">
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="col-md-12">
+                <div class="row">
+                    <div class="col-md-3 input-container">
+                        <label>Tipo de nacionalidade</label>
+                        <select name="tipoNacionalidade" formControlName="tipoNacionalidade">
+                            <option>Option 1</option>
+                            <option>Option 2</option>
+                            <option>Option 3</option>
+                        </select>
+                    </div>
+
+                    <div class="col-md-3 input-container">
+                        <label>Nacionalidade</label>
+                        <select name="nacionalidade" formControlName="nacionalidade">
+                            <option>Option 1</option>
+                            <option>Option 2</option>
+                            <option>Option 3</option>
+                        </select>
+                    </div>
+
+                    <div class="col-md-3 input-container">
+                        <label>Naturalidade</label>
+                        <input type="text" name="naturalidade" formControlName="naturalidade">
+                    </div>
+
+                    <div class="col-md-3 input-container">
+                        <label>Sexo</label>
+
+                        <div class="radio-container">
+                            <div class="radio-item">
+                                <input type="radio" name="sexo" formControlName="sexo" value="{{gender.male}}">
+                                <label>Masculino</label>
+                            </div>
+                            <div class="radio-item">
+                                <input type="radio" name="sexo" formControlName="sexo" value="{{gender.female}}">
+                                <label>Feminino</label>
+                            </div>
+                        </div>
+
+                    </div>
+
+                    <div class="col-md-6 input-container">
+                        <label>Nome da mãe</label>
+                        <input type="text" name="nomeMae" formControlName="nomeMae">
+                    </div>
+
+                    <div class="col-md-6 input-container">
+                        <label>Nome do pai <span class="secondary">(opcional)</span></label>
+                        <input type="text" name="nomePai" formControlName="nomePai">
+                    </div>
+
+                    <hr>
+
+                    <span class="bold">DOCUMENTOS</span>
+
+                    <div class="col-md-3 input-container">
+                        <label>CPF</label>
+                        <input type="text" name="cpf" formControlName="cpf">
+                    </div>
+
+                    <div class="col-md-3 input-container">
+                        <label>Situação do CPF</label>
+                        <input type="text" name="situacaoCpf" formControlName="situacaoCpf">
+                    </div>
+
+                    <div class="col-md-3 input-container">
+                        <label>Data de consulta do cpf</label>
+                        <input type="text" name="dataConsultaCpf" formControlName="dataConsultaCpf">
+                    </div>
+
+                    <div class="col-md-3 input-container">
+
+                    </div>
+
+                    <div class="col-md-3 input-container">
+                        <label>Documento de identidade</label>
+                        <input type="text" name="documentoIdentidade" formControlName="documentoIdentidade">
+                    </div>
+
+                    <div class="col-md-3 input-container">
+                        <label>Número do documento </label>
+                        <input type="text" name="numeroDocumentoIdentidade" formControlName="numeroDocumentoIdentidade">
+                    </div>
+
+                    <div class="col-md-2 input-container">
+                        <label>Órgão emissor </label>
+                        <input type="text" name="orgaoEmissor" formControlName="orgaoEmissor">
+                    </div>
+
+                    <div class="col-md-1 input-container">
+                        <label>UF</label>
+                        <input type="text" name="ufEmissor" formControlName="ufEmissor">
+                    </div>
+
+                    <div class="col-md-3 input-container">
+                        <label>Data de emissão</label>
+                        <input type="text" name="dataEmissao" formControlName="dataEmissao">
+                    </div>
+                </div>
+            </div>
+
+        </form>
+    </div>
+</div>
+
+<footer>
+    <button class="btn-primary btn-medium">Próximo</button>
+    <button class="btn-secondary btn-medium">Ações</button>
+    <button class="btn-tertiary btn-medium">Voltar</button>
+</footer>
