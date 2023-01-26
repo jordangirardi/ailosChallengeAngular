@@ -1,0 +1,54 @@
+@import "./src/variables.scss";
+
+.checkbox-content {
+  margin-top: 15px;
+  display: block;
+  position: relative;
+  padding-left: 26px;
+  cursor: pointer;
+  user-select: none;
+
+  input {
+    position: absolute;
+    opacity: 0;
+    cursor: pointer;
+    height: 0;
+    width: 0;
+  }
+
+  span {
+    position: absolute;
+    display: flex;
+    justify-content: center;
+    align-items: flex-end;
+    top: 50%;
+    left: 0;
+    height: 16px;
+    width: 16px;
+    border-radius: 2px;
+    background-color: #fff;
+    border: 1px solid #040f14;
+    transform: translateY(-50%);
+    transition: none;
+  }
+
+  span:after {
+    content: "";
+    position: absolute;
+    display: none;
+    width: 5px;
+    height: 10px;
+    border: solid white;
+    border-width: 0 2px 2px 0;
+    transform: rotate(45deg) translate3d(-2px, -2px, 0);
+  }
+
+  input:checked ~ span {
+    background-color: $ailos-orange;
+    border-color: $ailos-orange;
+  }
+
+  input:checked ~ span:after {
+    display: block;
+  }
+}
