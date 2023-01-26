@@ -1,0 +1,35 @@
+@import "./src/variables.scss";
+.header-container {
+  padding-left: $menu-width;
+  height: 70px;
+
+  .header-content {
+    padding: 15px;
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    line-height: 32px;
+
+    .breadcrumb {
+      display: block;
+      height: 100%;
+      line-height: 18px;
+      margin: 0;
+
+      h1 {
+        font-family: "Exo 2", sans-serif;
+        font-size: 24px;
+        font-weight: 700;
+        color: #040f14;
+        text-transform: uppercase;
+        margin: 0;
+      }
+
+      span {
+        font-size: 12px;
+        font-weight: 400;
+        color: #889499;
+      }
+    }
+  }
+}
