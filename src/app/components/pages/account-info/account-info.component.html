@@ -1,0 +1,57 @@
+<div class="form-container">
+    <div class="form-header">
+        <H4>Informação da conta</H4>
+        <span class="secondary">Defina a situação para a abertura da conta, selcione qual PA será o atendimento
+            presencial e selecione o tipo de conta do cooperado.</span>
+    </div>
+
+    <div class="row">
+        <form>
+            <div class="row">
+
+                <div class="col-md-3 input-container">
+                    <label>Situação da conta</label>
+                    <select>
+                        <option value="1">Liberada</option>
+                        <option value="2">Em análise</option>
+                    </select>
+                </div>
+
+            </div>
+
+            <div class="row">
+                <div class="col-md-3 input-container">
+                    <label>Posto de atendimento</label>
+                    <select>
+                        <option value="1">Option 1</option>
+                        <option value="2">Option 2</option>
+                        <option value="3">Option 3</option>
+                    </select>
+                </div>
+            </div>
+
+            <div class="row">
+                <div class="col-md-3 input-container">
+                    <label>Selecione qual tipo de conta será aberta</label>
+
+                    <div class="radio-container vertical">
+                        <div class="radio-item" *ngFor="let accountType of accountTypes">
+                            <input id="ckbAccountType_{{accountType.id}}" type="radio" name="accountType"
+                                value="{{accountType.id}}">
+                            <label for="ckbAccountType_{{accountType.id}}">{{ accountType.description }}</label>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+
+        </form>
+    </div>
+</div>
+
+<footer>
+    <button class="btn-primary btn-medium">Abrir conta</button>
+    <button class="btn-secondary btn-medium">Adicionar titular</button>
+    <button class="btn-secondary btn-medium">Ações</button>
+    <button class="btn-tertiary btn-medium">Voltar</button>
+</footer>

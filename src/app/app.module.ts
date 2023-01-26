@@ -25,6 +25,7 @@ import { ClientAddressFormComponent } from './components/pages/client-address-fo
 import { ClientEarningsFormComponent } from './components/pages/client-earnings-form/client-earnings-form.component';
 import { ClientLegallyResponsibleFormComponent } from './components/pages/client-legally-responsible-form/client-legally-responsible-form.component';
 import { ClientAttorneyFormComponent } from './components/pages/client-attorney-form/client-attorney-form.component';
+import { AccountInfoComponent } from './components/pages/account-info/account-info.component';
 
 @NgModule({
   declarations: [
@@ -44,6 +45,7 @@ import { ClientAttorneyFormComponent } from './components/pages/client-attorney-
     ClientEarningsFormComponent,
     ClientLegallyResponsibleFormComponent,
     ClientAttorneyFormComponent,
+    AccountInfoComponent,
   ],
   imports: [
     BrowserModule,
