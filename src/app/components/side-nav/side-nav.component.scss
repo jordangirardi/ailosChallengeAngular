@@ -1,0 +1,43 @@
+@import "./src/variables.scss";
+
+.side-nav-container {
+  width: 100px;
+  height: 100%;
+  padding: 25px 0;
+  display: flex;
+  flex-direction: column;
+  background-color: $ailos-blue;
+  position: fixed;
+  top: 0;
+  left: 0;
+
+  .side-nav-logo {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+  }
+
+  .side-nav-area {
+    margin-top: 25px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+  }
+
+  .side-nav-button {
+    padding: 15px;
+    display: flex;
+    justify-content: center;
+    color: #fff;
+    cursor: pointer;
+
+    .mat-icon {
+      width: 40px;
+      height: 40px;
+    }
+
+    .material-icons {
+      font-size: 35px;
+    }
+  }
+}

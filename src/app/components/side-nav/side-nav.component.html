@@ -1,0 +1,12 @@
+<div class="side-nav-container">
+    <div class="side-nav-logo">
+        <img src="./assets/img/ailos_logo.png" width="50">
+    </div>
+    <div class="side-nav-area">
+
+        <a class="side-nav-button" *ngFor="let navItem of navItems">
+            <mat-icon fontIcon="{{navItem.icon}}"></mat-icon>
+        </a>
+
+    </div>
+</div>
