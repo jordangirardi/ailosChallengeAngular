@@ -1,0 +1,72 @@
+<div class="page-content"> 
+
+    <!-- <mat-stepper  animationDuration="0" linear>
+
+        <mat-step label="Início">
+
+                <h3>Informe o CPF do futuro cooperado (a)</h3>
+                <span>Se necessário, você poderá duplicar uma conta existente ou pausar
+                    e retomar este cadastro futuramente.
+                </span>
+                <span>Digite apenas os número (sem pontos ou traços).</span>
+
+                <div class="form-control">
+                    <label>CPF</label>
+                    <input type="text">
+                </div>
+
+                <button class="btn-primary btn-medium">Consultar por CPF</button>
+
+
+        </mat-step>
+
+        <mat-step label="Documentos" [editable]="false">
+            <div class="upload-area">
+                <app-file-upload></app-file-upload>
+                <app-file-upload></app-file-upload>
+                <app-file-upload></app-file-upload>
+                <app-file-upload></app-file-upload>
+            </div>
+        </mat-step>
+
+        <mat-step label="Dados cadastrais" [editable]="false">
+            <label>Dados cadastrais</label>
+        </mat-step>
+
+        <mat-step label="Admissão" [editable]="false">
+            <label>Admissão</label>
+        </mat-step>
+
+
+    </mat-stepper> -->
+
+    <app-account-owner-form></app-account-owner-form>
+
+
+</div>
+
+ <footer>
+    <button class="btn-primary btn-medium">Iniciar nova admissão</button>
+    <button class="btn-secondary btn-medium" (click)="showInfoBlock()">Dicas para abertura da conta</button>
+</footer> 
+
+ <app-side-info-block [isShowInfoBlock]="isShowInfoBlock">
+    <h1>Checklist para <br>abertura da conta</h1>
+    <p>Confira algumas dicas que irão lhe ajudar neste atendimento para que a admissão
+        aconteça da melhor forma possível.
+    </p>
+
+    <app-checkbox [label]="'Conheça seu cooperado'" (onCheckboxChange)="changeExtraInfo($event)"></app-checkbox>
+    <div class="extra-info" *ngIf="isShowExtraInfo">
+        <ul>
+            <li>O que traz você até a cooperativa?</li>
+            <li>O que é mais importante na sua vida?</li>
+            <li>Você tem algum sonho?</li>
+        </ul>
+    </div>
+    <app-checkbox [label]="'Fale sobre a cooperativa'"></app-checkbox>
+    <app-checkbox [label]="'Documentos e comprovações necessárias'"></app-checkbox>
+
+    <button class="btn-secondary btn-medium btn-hide-info-block" (click)="hideInfoBlock()">Continuar
+        atendimento</button>
+</app-side-info-block> 
