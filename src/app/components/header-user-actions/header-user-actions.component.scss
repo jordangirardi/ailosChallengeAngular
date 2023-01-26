@@ -1,0 +1,43 @@
+@import "./src/variables.scss";
+
+.user-actions-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  span {
+    border: 1px solid $ailos-blue;
+    font-weight: 800;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 20px;
+    padding: 0px 20px;
+    height: 30px;
+    color: $ailos-blue;
+    margin: 0 5px;
+  }
+
+  .profile-container {
+    padding: 10px;
+    display: flex;
+    justify-self: center;
+    align-items: center;
+
+    img {
+      display: inline-block;
+      width: 32px;
+      height: 32px;
+      border-radius: 50%;
+      border: 1px solid $ailos-blue;
+      object-fit: cover;
+    }
+
+    mat-icon {
+      color: $ailos-blue;
+      font-size: 14px;
+      position: absolute;
+      transform: translate3d(75%, 75%, 0);
+    }
+  }
+}

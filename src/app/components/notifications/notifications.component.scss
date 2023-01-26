@@ -1,0 +1,31 @@
+@import "./src/variables.scss";
+
+.notification-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 5px;
+
+  mat-icon {
+    font-size: 35px;
+    height: 32px;
+    width: 32px;
+    color: $ailos-blue;
+    position: relative;
+    cursor: pointer;
+  }
+
+  span {
+    position: absolute;
+    transform: translate3d(50%, -75%, 0);
+    color: #fff;
+    background: #ff0000;
+    border-radius: 50%;
+    width: 15px;
+    height: 15px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 10px;
+  }
+}
