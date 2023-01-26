@@ -1,20 +1,5 @@
 @import "./src/variables.scss";
 
-hr {
-  margin-top: 30px;
-  margin-bottom: 40px;
-  border-color: $ailos-blue-60;
-}
-
-form {
-  margin-top: 20px;
-}
-
-.form-header {
-  margin-top: 25px;
-  margin-bottom: 10px;
-}
-
 .client-picutre-container {
   display: flex;
   flex-direction: column;

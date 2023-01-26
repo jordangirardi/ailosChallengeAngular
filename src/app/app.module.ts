@@ -22,6 +22,7 @@ import { ProgressBarComponent } from './components/progress-bar/progress-bar.com
 import { AccountOwnerFormComponent } from './components/pages/account-owner-form/account-owner-form.component';
 import { MatGridListModule } from '@angular/material/grid-list';
 import { ClientAddressFormComponent } from './components/pages/client-address-form/client-address-form.component';
+import { ClientEarningsFormComponent } from './components/pages/client-earnings-form/client-earnings-form.component';
 
 @NgModule({
   declarations: [
@@ -38,6 +39,7 @@ import { ClientAddressFormComponent } from './components/pages/client-address-fo
     ProgressBarComponent,
     AccountOwnerFormComponent,
     ClientAddressFormComponent,
+    ClientEarningsFormComponent,
   ],
   imports: [
     BrowserModule,

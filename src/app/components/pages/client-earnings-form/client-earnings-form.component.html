@@ -1,0 +1,116 @@
+<div class="form-container">
+    <div class="form-header">
+        <H4>Profissional e financeiro do cooperado</H4>
+        <span class="secondary">Confirme as informações obtidas para o cadastro e atualize os dados se
+            necessário.</span>
+    </div>
+
+    <span class="bold uppercase">profissional</span>
+
+    <div class="row">
+        <form>
+            <div class="row">
+                <div class="col-md-3 input-container">
+                    <label>Natureza de ocupação</label>
+                    <input type="text">
+                </div>
+
+                <div class="col-md-3 input-container">
+                    <label>Tipo de comprovação de renda</label>
+                    <select>
+                        <option>Option 1</option>
+                        <option>Option 2</option>
+                        <option>Option 3</option>
+                    </select>
+                </div>
+
+                <div class="col-md-3 input-container">
+                    <label>Renda principal</label>
+                    <input type="text">
+                </div>
+
+                <div class="col-md-3 input-container">
+                    <label>Ocupação</label>
+                    <input type="text">
+                </div>
+
+                <div class="col-md-3 input-container">
+                    <label>Cargo<span class="secondary">(opcional)</span></label>
+                    <input type="text">
+                </div>
+
+                <div class="col-md-3 input-container">
+                    <label>CNPJ do empregador <span class="secondary">(opcional)</span></label>
+                    <input type="text">
+                </div>
+
+                <div class="col-md-3 input-container">
+                    <label>Empregador<span class="secondary">(opcional)</span></label>
+                    <input type="text">
+                </div>
+
+                <div class="col-md-3 input-container">
+                    <label>Data admissão<span class="secondaru">(opcional)</span></label>
+                    <input type="text">
+                </div>
+
+                <hr>
+
+                <span class="bold uppercase">renda adicional</span>
+
+                <div class="col-md-3 input-container">
+                    <label>Renda</label>
+                    <input type="text">
+                </div>
+
+                <div class="col-md-3 input-container">
+                    <label>Motivo</label>
+                    <input type="text">
+                </div>
+
+                <div class="col-md-3 input-container">
+                    <label>Observação</label>
+                    <input type="text">
+                </div>
+
+                <div class="col-md-3 input-container content-bottom">
+                    <button class="btn-tertiary btn-small no-margin">Excluir renda</button>
+                </div>
+
+                <div class="col-md-3 input-container content-bottom">
+                    <button class="btn-secondary btn-small no-margin">Adicionar novo</button>
+                </div>
+
+            </div>
+
+
+            <span class="bold uppercase">FCTA/RS</span>
+
+            <app-checkbox [label]="'Cooperado possui domicílio ou obrigação fiscal fora do Brasil'"
+                (onCheckboxChange)="changeExtraForm($event)"></app-checkbox>
+
+            <div *ngIf="isShowExtraForm" class="row ">
+
+                <div class="col-md-3 input-container">
+                    <label>País com domicílio/obrigação fiscal</label>
+                    <input type="text">
+                </div>
+
+                <div class="col-md-3 input-container">
+                    <label>NIF</label>
+                    <input type="text">
+                </div>
+                <div class="col-md-12 input-container">
+                    <button class="btn-secondary btn-small no-margin">Adicionar novo</button>
+                </div>
+            </div>
+
+        </form>
+    </div>
+</div>
+
+<footer>
+    <button class="btn-primary btn-medium">Próximo</button>
+    <button class="btn-secondary btn-medium">Ações</button>
+    <button class="btn-tertiary btn-medium">Voltar</button>
+</footer>
