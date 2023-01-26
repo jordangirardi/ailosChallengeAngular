@@ -1,7 +1,7 @@
 <div class="form-container">
     <div class="form-header">
-        <H4>Informações do representante legal</H4>
-        <span class="secondary">Insira as informações cadastrais do representante legal do novo cooperado ou
+        <H4>Informações do procurador</H4>
+        <span class="secondary">Insira as informações cadastrais do procurador do novo cooperado ou
             cooperada.</span>
     </div>
 
@@ -66,6 +66,26 @@
                     <input type="text">
                 </div>
 
+                <div class="col-md-3 input-container">
+                    <label>Responsável pela abertura da conta</label>
+                    <input type="text">
+                </div>
+
+                <div class="col-md-3 input-container">
+                    <label>Procurador possui vigência?</label>
+
+                    <div class="radio-container">
+                        <div class="radio-item">
+                            <input type="radio" name="isWhatsApp" value="1">
+                            <label>Sim</label>
+                        </div>
+                        <div class="radio-item">
+                            <input type="radio" name="isWhatsApp" value="0">
+                            <label>Não</label>
+                        </div>
+                    </div>
+                </div>
+
                 <hr>
 
                 <span class="bold uppercase">dados pessoais</span>
@@ -81,39 +101,28 @@
                 </div>
 
                 <div class="col-md-3 input-container">
-                    <label>Relacionamento com o titular</label>
+                </div>
+
+                <div class="col-md-3 input-container">
+                    <label>Responsável legal</label>
                     <select>
-                        <option value="1">Option A</option>
-                        <option value="2">Option B</option>
-                        <option value="3">Option C</option>
+                        <option value="1">Option 1</option>
+                        <option value="2">Option 2</option>
+                        <option value="3">Option 3</option>
                     </select>
+                </div>
+
+                <div class="col-md-3 input-container">
+                    <label>Data de emancipação</label>
+                    <input type="text">
                 </div>
 
                 <div class="col-md-3 input-container">
                     <label>Estado civil</label>
                     <select>
-                        <option value="1">Option A</option>
-                        <option value="2">Option B</option>
-                        <option value="3">Option C</option>
-                    </select>
-                </div>
-
-
-                <div class="col-md-3 input-container">
-                    <label>Pessoa com deficiência</label>
-                    <select>
-                        <option value="1">Option A</option>
-                        <option value="2">Option B</option>
-                        <option value="3">Option C</option>
-                    </select>
-                </div>
-
-                <div class="col-md-3 input-container">
-                    <label>Necessidade</label>
-                    <select>
-                        <option value="1">Option A</option>
-                        <option value="2">Option B</option>
-                        <option value="3">Option C</option>
+                        <option value="1">Option 1</option>
+                        <option value="2">Option 2</option>
+                        <option value="3">Option 3</option>
                     </select>
                 </div>
 
@@ -133,20 +142,41 @@
                 </div>
 
                 <div class="col-md-3 input-container">
+                    <label>Pessoa com deficiência</label>
+                    <select>
+                        <option value="1">Option 1</option>
+                        <option value="2">Option 2</option>
+                        <option value="3">Option 3</option>
+                    </select>
+                </div>
+
+                <div class="col-md-3 input-container">
+                    <label>Necessidade</label>
+                    <select>
+                        <option value="1">Option 1</option>
+                        <option value="2">Option 2</option>
+                        <option value="3">Option 3</option>
+                    </select>
+                </div>
+
+                <div class="col-md-6 input-container">
+                </div>
+
+                <div class="col-md-3 input-container">
                     <label>Tipo de nacionalidade</label>
                     <select>
-                        <option value="1">Option A</option>
-                        <option value="2">Option B</option>
-                        <option value="3">Option C</option>
+                        <option value="1">Option 1</option>
+                        <option value="2">Option 2</option>
+                        <option value="3">Option 3</option>
                     </select>
                 </div>
 
                 <div class="col-md-3 input-container">
                     <label>Nacionalidade</label>
                     <select>
-                        <option value="1">Option A</option>
-                        <option value="2">Option B</option>
-                        <option value="3">Option C</option>
+                        <option value="1">Option 1</option>
+                        <option value="2">Option 2</option>
+                        <option value="3">Option 3</option>
                     </select>
                 </div>
 
@@ -234,6 +264,24 @@
                     <label>E-mail<span class="secondary">(opcional)</span></label>
                     <input type="text">
                 </div>
+
+                <hr>
+
+                <span class="bold uppercase">poderes</span>
+
+                <span>Selecione os poderes do procurador</span>
+                <span (click)="markAllPermissions()">...</span>
+
+
+                <div class="col-md-3" *ngFor="let permission of permissions">
+                    <app-checkbox [label]="permission.label" [checked]="permission.hasPermission"
+                        (onCheckboxChange)="changeCheckboxState($event, permission)"></app-checkbox>
+                </div>
+
+                <div class="col-md-12">
+                    <button class="btn-tertiary btn-small no-margin no-padding">Criar novo poder</button>
+                </div>
+
 
             </div>
         </form>
