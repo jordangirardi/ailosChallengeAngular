@@ -1,0 +1,7 @@
+<div class="form-input">
+    <label>{{ label }}</label>
+    <div class="input-container">
+        <input (input)="handleChange()" [(ngModel)]="inputValue" placeholder="{{placeholder}}" type="{{ type }}">
+        <label class="error-message">{{ error }}</label>
+    </div>
+</div>
