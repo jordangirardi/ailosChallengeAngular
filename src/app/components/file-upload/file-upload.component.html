@@ -1,0 +1,10 @@
+<div class="upload-container">
+    <label class="file-description">descricao arquivo</label>
+
+    <span class="necessary-info" [class.no-necessary]="!isNecessary">{{ necessaryText }}</span>
+
+    <div class="drop-area">
+        <mat-icon fontIcon="cloud_upload"></mat-icon>
+        <label>Clique aqui ou arraste o seu arquivo</label>
+    </div>
+</div>
