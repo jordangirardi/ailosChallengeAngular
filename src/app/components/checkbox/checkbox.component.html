@@ -1,5 +1,5 @@
 <label class="checkbox-content">
     {{ label }}
-    <input type="checkbox" (change)="handleChange($event)">
+    <input [checked]="checked" type="checkbox" (change)="handleChange($event)">
     <span></span>
 </label>
