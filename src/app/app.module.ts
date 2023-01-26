@@ -23,6 +23,7 @@ import { AccountOwnerFormComponent } from './components/pages/account-owner-form
 import { MatGridListModule } from '@angular/material/grid-list';
 import { ClientAddressFormComponent } from './components/pages/client-address-form/client-address-form.component';
 import { ClientEarningsFormComponent } from './components/pages/client-earnings-form/client-earnings-form.component';
+import { ClientLegallyResponsibleFormComponent } from './components/pages/client-legally-responsible-form/client-legally-responsible-form.component';
 
 @NgModule({
   declarations: [
@@ -40,6 +41,7 @@ import { ClientEarningsFormComponent } from './components/pages/client-earnings-
     AccountOwnerFormComponent,
     ClientAddressFormComponent,
     ClientEarningsFormComponent,
+    ClientLegallyResponsibleFormComponent,
   ],
   imports: [
     BrowserModule,

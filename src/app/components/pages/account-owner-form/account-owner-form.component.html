@@ -1,7 +1,8 @@
 <div class="form-container">
     <div class="form-header">
         <H4>Identificação do titular da conta</H4>
-        <span class="secondary">Confirme as informações obtidas para o cadastro e atualize os dados se necessário.</span>
+        <span class="secondary">Confirme as informações obtidas para o cadastro e atualize os dados se
+            necessário.</span>
     </div>
 
     <span class="bold uppercase">dados pessoais</span>
@@ -142,7 +143,7 @@
                     </div>
 
                     <div class="col-md-3 input-container">
-                        <label>Data de consulta do cpf</label>
+                        <label>Data de consulta do CPF</label>
                         <input type="text" name="dataConsultaCpf" formControlName="dataConsultaCpf">
                     </div>
 
@@ -162,12 +163,20 @@
 
                     <div class="col-md-2 input-container">
                         <label>Órgão emissor </label>
-                        <input type="text" name="orgaoEmissor" formControlName="orgaoEmissor">
+                        <select name="orgaoEmissor" formControlName="orgaoEmissor">
+                            <option value="1">Option 1</option>
+                            <option value="2">Option 2</option>
+                            <option value="3">Option 3</option>
+                        </select>
                     </div>
 
                     <div class="col-md-1 input-container">
                         <label>UF</label>
-                        <input type="text" name="ufEmissor" formControlName="ufEmissor">
+                        <select name="ufEmissor" formControlName="ufEmissor">
+                            <option value="1">Option 1</option>
+                            <option value="2">Option 2</option>
+                            <option value="3">Option 3</option>
+                        </select>
                     </div>
 
                     <div class="col-md-3 input-container">
