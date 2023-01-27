@@ -1,0 +1,35 @@
+@import "./src/variables.scss";
+
+.dialog-container {
+  width: 500px;
+  border-radius: 2px;
+  box-shadow: 0 0 5px $box-shadow;
+
+  .dialog-header {
+    display: flex;
+    justify-content: space-between;
+    padding: 15px;
+    border-bottom: 1px solid $ailos-black;
+
+    mat-icon {
+        color: $ailos-black;
+        cursor: pointer;
+    }
+  }
+
+  .dialog-content {
+    padding: 20px;
+
+    button {
+      margin-top: 10px;
+      margin-left: 0;
+      margin-right: 15px;
+    }
+  }
+
+  .dialog-footer {
+    padding: 15px;
+    display: flex;
+    justify-content: flex-end;
+  }
+}

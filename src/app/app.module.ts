@@ -30,6 +30,8 @@ import { AccountSecurityFormComponent } from './components/pages/account-securit
 import { CardComponent } from './components/card/card.component';
 import { InfoDisplayComponent } from './components/info-display/info-display.component';
 import { DocsAssignaturesComponent } from './components/pages/docs-signatures/docs-signatures.component';
+import { MatDialogModule } from '@angular/material/dialog';
+import { DocumentTypeComponent } from './components/dialogs/document-type/document-type.component';
 
 @NgModule({
   declarations: [
@@ -54,6 +56,7 @@ import { DocsAssignaturesComponent } from './components/pages/docs-signatures/do
     CardComponent,
     InfoDisplayComponent,
     DocsAssignaturesComponent,
+    DocumentTypeComponent
   ],
   imports: [
     BrowserModule,
@@ -65,6 +68,7 @@ import { DocsAssignaturesComponent } from './components/pages/docs-signatures/do
     MatGridListModule,
     FormsModule,
     ReactiveFormsModule,
+    MatDialogModule,
   ],
   providers: [],
   bootstrap: [AppComponent],

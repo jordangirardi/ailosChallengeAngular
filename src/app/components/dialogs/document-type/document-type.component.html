@@ -1,0 +1,21 @@
+<div class="dialog-container">
+    <div class="dialog-header">
+        <span class="bold">Adicionar um documento de identificação</span>
+        <mat-icon (click)="closeDialog()" fontIcon="close"></mat-icon>
+    </div>
+    <div class="dialog-content flex">
+
+        <span>Qual documento de identificação você gostaria de adicionar</span>
+        <button (click)="setDocumentType(1)" class="btn-secondary btn-small">DOC 1</button>
+        <button (click)="setDocumentType(2)" class="btn-secondary btn-small">DOC 2</button>
+        <button (click)="setDocumentType(3)" class="btn-secondary btn-small">DOC 3</button>
+        <button (click)="setDocumentType(4)" class="btn-secondary btn-small">DOC 4</button>
+        <button (click)="setDocumentType(5)" class="btn-secondary btn-small">DOC 5</button>
+        <button (click)="setDocumentType(6)" class="btn-secondary btn-small">DOC 6</button>
+        <button (click)="setDocumentType(7)" class="btn-secondary btn-small">DOC 7</button>
+        <button (click)="setDocumentType(8)" class="btn-secondary btn-small">DOC 8</button>
+    </div>
+    <div class="dialog-footer">
+        <button (click)="closeDialog()" class="btn-tertiary btn-small">Cancelar</button>
+    </div>
+</div>
