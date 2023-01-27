@@ -1,0 +1,73 @@
+<div class="form-container">
+    <div class="form-header">
+        <H4>Documentos e assinaturas</H4>
+    </div>
+
+    <span class="bold uppercase">resumo da conta</span>
+
+    <div class="owners-container">
+        <app-card *ngFor="let owner of accountOwners" [title]="owner.role" [subtitle]="owner.accountType">
+            <app-info-display *ngFor="let ownerInfo of owner.ownerInfos" [title]="ownerInfo.title"
+                [info]="ownerInfo.value" [icon]="ownerInfo.icon"></app-info-display>
+        </app-card>
+    </div>
+
+    <hr>
+
+    <span class="bold uppercase">imprimir documentos</span>
+    <br>
+    <span class="secondary color-gray"> Os documentos deverão ser impressos e assinados pelo cooperado ou
+        cooperada</span>
+    <br>
+
+    <div class="margin-top-15">
+
+        <span class="bold">Documentos</span>
+
+        <div class="row">
+            <div class="col-md-2">
+                <app-checkbox [label]="'Ficha matrícula'"></app-checkbox>
+            </div>
+
+            <div class="col-md-2">
+                <app-checkbox [label]="'Cartão assinatura'"></app-checkbox>
+            </div>
+
+            <div class="col-md-3">
+                <app-checkbox [label]="'Declaração FACTA/CRS'"></app-checkbox>
+            </div>
+
+            <div class="col-md-12 margin-top-15">
+                <button class="btn-secondary btn-small no-margin">Imprimir documentos</button>
+            </div>
+        </div>
+    </div>
+
+    <hr>
+
+    <span class="bold uppercase">digitalizar documentos</span>
+    <br>
+    <span class="secondary color-gray">Os documentos já assinados deverão ser digitalizados</span>
+
+
+    <div class="documents-container">
+        <app-file-upload></app-file-upload>
+        <app-file-upload></app-file-upload>
+        <app-file-upload></app-file-upload>
+        <app-file-upload></app-file-upload>
+    </div>
+
+
+
+
+
+
+
+
+</div>
+
+<footer>
+    <button class="btn-primary btn-medium">Próximo</button>
+    <button class="btn-secondary btn-medium">Ações</button>
+    <button class="btn-tertiary btn-medium">Voltar</button>
+</footer>

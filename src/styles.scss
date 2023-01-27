@@ -248,3 +248,12 @@ span.secondary {
 span.color-grey {
   color: $grey-4;
 }
+
+.flex {
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.margin-top-15 {
+  margin-top: 15px;
+}

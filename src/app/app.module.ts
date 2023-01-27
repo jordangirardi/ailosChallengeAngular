@@ -29,6 +29,7 @@ import { AccountInfoComponent } from './components/pages/account-info/account-in
 import { AccountSecurityFormComponent } from './components/pages/account-security-form/account-security-form.component';
 import { CardComponent } from './components/card/card.component';
 import { InfoDisplayComponent } from './components/info-display/info-display.component';
+import { DocsAssignaturesComponent } from './components/pages/docs-signatures/docs-signatures.component';
 
 @NgModule({
   declarations: [
@@ -52,6 +53,7 @@ import { InfoDisplayComponent } from './components/info-display/info-display.com
     AccountSecurityFormComponent,
     CardComponent,
     InfoDisplayComponent,
+    DocsAssignaturesComponent,
   ],
   imports: [
     BrowserModule,
