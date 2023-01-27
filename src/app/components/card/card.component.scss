@@ -1,0 +1,21 @@
+@import "./src/variables.scss";
+
+.card-container {
+  font-family: "Open sans", sans-serif;
+  padding: 20px;
+  display: flex;
+  flex-direction: column;
+  background-color: #fff;
+  border-radius: 2px;
+  box-shadow: 0 0 4px $card-box-shadow;
+  font-size: 14px;
+  width: fit-content;
+  max-width: 275px;
+
+  .title {
+    font-weight: 700;
+    line-height: 16.41px;
+    color: $ailos-black;
+    margin-bottom: 15px;
+  }
+}

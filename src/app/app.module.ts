@@ -26,6 +26,9 @@ import { ClientEarningsFormComponent } from './components/pages/client-earnings-
 import { ClientLegallyResponsibleFormComponent } from './components/pages/client-legally-responsible-form/client-legally-responsible-form.component';
 import { ClientAttorneyFormComponent } from './components/pages/client-attorney-form/client-attorney-form.component';
 import { AccountInfoComponent } from './components/pages/account-info/account-info.component';
+import { AccountSecurityFormComponent } from './components/pages/account-security-form/account-security-form.component';
+import { CardComponent } from './components/card/card.component';
+import { InfoDisplayComponent } from './components/info-display/info-display.component';
 
 @NgModule({
   declarations: [
@@ -46,6 +49,9 @@ import { AccountInfoComponent } from './components/pages/account-info/account-in
     ClientLegallyResponsibleFormComponent,
     ClientAttorneyFormComponent,
     AccountInfoComponent,
+    AccountSecurityFormComponent,
+    CardComponent,
+    InfoDisplayComponent,
   ],
   imports: [
     BrowserModule,
