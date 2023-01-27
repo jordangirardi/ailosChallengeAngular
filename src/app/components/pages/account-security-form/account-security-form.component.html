@@ -1,0 +1,102 @@
+<div class="form-container">
+    <div class="form-header">
+        <H4>Senhas e limites</H4>
+    </div>
+
+    <div class="row">
+        <form>
+            <div class="row">
+
+                <span class="bold uppercase">conta</span>
+                <span class="secondary color-grey">Informações da conta</span>
+
+                <app-card [title]="'Conta corrente'">
+                    <app-info-display *ngFor="let accountInfo of accountInfos" [title]="accountInfo.title"
+                        [info]="accountInfo.info" [icon]="accountInfo.icon"></app-info-display>
+                </app-card>
+
+                <hr>
+
+                <span class="bold uppercase">senhas</span>
+                <span class="secondary color-grey">Solicite ao cooperado para cadastrar as senhas de acesso aos canais digitais da
+                    cooperativa.</span>
+
+
+                <div class="col-md-3 input-container">
+                    <label>Senha</label>
+                    <input type="password">
+                </div>
+
+                <div class="col-md-3 input-container">
+                    <label>Letras de segurança</label>
+                    <input type="password">
+                </div>
+
+                <div class="col-md-6"></div>
+
+                <div class="col-md-3 input-container">
+                    <label>Repetir senha</label>
+                    <input type="password">
+                </div>
+
+                <div class="col-md-3 input-container">
+                    <label>Repetir letras de segurança</label>
+                    <input type="password">
+                </div>
+
+                <div class="col-md-6"></div>
+
+                <div class="col-md-3">
+                    <ul>
+                        <li><span class="secondary">8 dígitos</span></li>
+                        <li><span class="secondary">Não devem ser números sequenciais</span></li>
+                    </ul>
+                </div>
+
+                <div class="col-md-3 ">
+                    <ul>
+                        <li><span class="secondary">3 caracteres</span></li>
+                        <li><span class="secondary">Não devem ser as iniciais do nome</span></li>
+                    </ul>
+                </div>
+
+                <hr>
+
+                <span class="bold uppercase">limites operacionais</span>
+                <span class="secondary color-grey">Cadastre os limites para operações. Esta é uma medida para trazer mais segurança
+                    ao cooperado ou cooperada.</span>
+
+                <div class="col-md-2 input-container">
+                    <label>Valor limite diário</label>
+                    <input type="text">
+                </div>
+
+                <div class="col-md-2 input-container">
+                    <label>Diário TED</label>
+                    <input type="text">
+                </div>
+
+                <div class="col-md-2 input-container">
+                    <label>Pix</label>
+                    <input type="text">
+                </div>
+
+                <div class="col-md-2 input-container">
+                    <label>VR Boleto</label>
+                    <input type="text">
+                </div>
+
+                <div class="col-md-2 input-container">
+                    <label>Dep. chq mob</label>
+                    <input type="text">
+                </div>
+
+            </div>
+        </form>
+    </div>
+</div>
+
+<footer>
+    <button class="btn-primary btn-medium">Próximo</button>
+    <button class="btn-secondary btn-medium">Ações</button>
+</footer>
