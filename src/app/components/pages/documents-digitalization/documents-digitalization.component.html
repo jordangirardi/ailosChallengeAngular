@@ -1,0 +1,62 @@
+<div class="form-container">
+    <div class="form-header">
+        <H4>Digitalizacao de documentos</H4>
+    </div>
+
+    <span class="bold uppercase">documentos do cooperado</span>
+    <br>
+    <span class="secondary color-grey">A inserção de documentos pode ser feita via upload do computador ou fluxo do
+        SmartShare (impressora). Os documentos devem ter boa visibilidade, estar legíveis e dentro das datas de
+        validade.</span>
+
+    <div class="flex">
+        <app-file-upload></app-file-upload>
+        <app-file-upload></app-file-upload>
+        <app-file-upload></app-file-upload>
+        <app-file-upload [isNecessary]="false"></app-file-upload>
+    </div>
+
+    <hr>
+
+    <span class="bold uppercase">documentos do representante</span>
+    <br>
+    <span class="secondary color-grey">Os documentos do responsável legal, curador ou procurador devem ser inclusos no
+        sistema para verificação e devem ter boa visibilidade, estar legível e dentro das datas de validade</span>
+
+    <app-checkbox></app-checkbox>
+
+    <div class="tutor-documents">
+        <div class="tutor-type">
+
+            <div class="input-container">
+
+                <div class="radio-container">
+                    <div class="radio-item">
+                        <input type="radio" name="tutorType" value="1">
+                        <label>Responsável legal</label>
+                    </div>
+                    <div class="radio-item">
+                        <input type="radio" name="tutorType" value="2">
+                        <label>Curador</label>
+                    </div>
+                    <div class="radio-item">
+                        <input type="radio" name="tutorType" value="3">
+                        <label>Procurador</label>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+
+        <div class="flex">
+            <app-file-upload></app-file-upload>
+            <app-file-upload [isNecessary]="false"></app-file-upload>
+        </div>
+    </div>
+</div>
+
+<footer>
+    <button class="btn-primary btn-medium">Próximo</button>
+    <button class="btn-secondary btn-medium">Ações</button>
+    <button class="btn-tertiary btn-medium">Voltar</button>
+</footer>
