@@ -1,10 +1,13 @@
 <div class="upload-container">
+    <input #fileInput type="file" accept=".jpeg, .jpg" (change)="handleFileChange($event)">
     <label class="file-description">descricao arquivo</label>
-
     <span class="necessary-info" [class.no-necessary]="!isNecessary">{{ necessaryText }}</span>
 
-    <div class="drop-area">
-        <mat-icon fontIcon="cloud_upload"></mat-icon>
-        <label>Clique aqui ou arraste o seu arquivo</label>
+    <div (click)="confirmDocumentType()" class="drop-area">
+        <img *ngIf="imgUploadedSrc !== ''" src="{{ imgUploadedSrc }}">
+        <div class="upload-items" *ngIf="imgUploadedSrc == ''">
+            <mat-icon fontIcon="cloud_upload"></mat-icon>
+            <label>Clique aqui ou arraste o seu arquivo</label>
+        </div>
     </div>
 </div>
