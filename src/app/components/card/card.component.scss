@@ -10,7 +10,9 @@
   box-shadow: 0 0 4px $card-box-shadow;
   font-size: 14px;
   width: fit-content;
-  max-width: 275px;
+  width: 275px;
+  height: 100%;
+  margin-right: 15px;
 
   .header-container {
     margin-bottom: 10px;

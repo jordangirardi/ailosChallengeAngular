@@ -32,6 +32,9 @@ import { InfoDisplayComponent } from './components/info-display/info-display.com
 import { DocsAssignaturesComponent } from './components/pages/docs-signatures/docs-signatures.component';
 import { MatDialogModule } from '@angular/material/dialog';
 import { DocumentTypeComponent } from './components/dialogs/document-type/document-type.component';
+import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
+import { DocumentsDigitalizationComponent } from './components/pages/documents-digitalization/documents-digitalization.component';
+import { NewClientIdentificationComponent } from './components/pages/new-client-identification/new-client-identification.component';
 
 @NgModule({
   declarations: [
@@ -56,7 +59,9 @@ import { DocumentTypeComponent } from './components/dialogs/document-type/docume
     CardComponent,
     InfoDisplayComponent,
     DocsAssignaturesComponent,
-    DocumentTypeComponent
+    DocumentTypeComponent,
+    DocumentsDigitalizationComponent,
+    NewClientIdentificationComponent,
   ],
   imports: [
     BrowserModule,
@@ -69,6 +74,7 @@ import { DocumentTypeComponent } from './components/dialogs/document-type/docume
     FormsModule,
     ReactiveFormsModule,
     MatDialogModule,
+    BrowserAnimationsModule,
   ],
   providers: [],
   bootstrap: [AppComponent],

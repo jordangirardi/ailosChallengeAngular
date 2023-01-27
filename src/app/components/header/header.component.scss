@@ -1,7 +1,7 @@
 @import "./src/variables.scss";
 .header-container {
   padding-left: $menu-width;
-  height: 70px;
+  height: $header-height;
 
   .header-content {
     padding: 15px;

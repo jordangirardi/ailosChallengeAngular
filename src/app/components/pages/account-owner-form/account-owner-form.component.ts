@@ -1,6 +1,6 @@
 import { Component } from '@angular/core';
 import { FormControl, FormGroup, Validators } from '@angular/forms';
-import { Gender } from 'src/app/enumerators/gender';
+import { GenderEnum } from 'src/app/enumerators/gender';
 import { Client } from 'src/app/models/client';
 
 @Component({
@@ -10,7 +10,7 @@ import { Client } from 'src/app/models/client';
 })
 export class AccountOwnerFormComponent {
   protected form!: FormGroup;
-  protected gender = Gender;
+  protected gender = GenderEnum;
 
   protected client: Client = new Client();
 

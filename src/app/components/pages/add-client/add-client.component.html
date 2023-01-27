@@ -1,64 +1,39 @@
-<div class="page-content"> 
+<div class="page-content">
 
-    <!-- <mat-stepper  animationDuration="0" linear>
+    <!-- <mat-horizontal-stepper #stepper linear labelPosition="bottom" [animationDuration]="'0'">
 
-        <mat-step label="Início">
-
-                <h3>Informe o CPF do futuro cooperado (a)</h3>
-                <span>Se necessário, você poderá duplicar uma conta existente ou pausar
-                    e retomar este cadastro futuramente.
-                </span>
-                <span>Digite apenas os número (sem pontos ou traços).</span>
-
-                <div class="form-control">
-                    <label>CPF</label>
-                    <input type="text">
-                </div>
-
-                <button class="btn-primary btn-medium">Consultar por CPF</button>
-
-
+        <mat-step label="Início" [editable]="false">
+            <app-documents-digitalization></app-documents-digitalization>
         </mat-step>
 
         <mat-step label="Documentos" [editable]="false">
-            <div class="upload-area">
-                <app-file-upload></app-file-upload>
-                <app-file-upload></app-file-upload>
-                <app-file-upload></app-file-upload>
-                <app-file-upload></app-file-upload>
-            </div>
+            <app-account-owner-form></app-account-owner-form>
         </mat-step>
 
         <mat-step label="Dados cadastrais" [editable]="false">
-            <label>Dados cadastrais</label>
+            <app-client-address-form></app-client-address-form>
+            <app-client-earnings-form></app-client-earnings-form>
+            <app-client-legally-responsible-form></app-client-legally-responsible-form>
+            <app-client-attorney-form></app-client-attorney-form>
         </mat-step>
 
         <mat-step label="Admissão" [editable]="false">
-            <label>Admissão</label>
+            <app-account-info></app-account-info>
+            <app-account-security-form></app-account-security-form>
+            <app-docs-signatures></app-docs-signatures>
         </mat-step>
 
+    </mat-horizontal-stepper> -->
 
-    </mat-stepper> -->
 
-    <!-- <app-client-address-form></app-client-address-form> -->
-    <!-- <app-account-owner-form></app-account-owner-form> -->
-    <!-- <app-client-earnings-form></app-client-earnings-form> -->
-    <!-- <app-client-legally-responsible-form></app-client-legally-responsible-form> -->
-    <!-- <app-client-attorney-form></app-client-attorney-form> -->
-    <!-- <app-account-info></app-account-info> -->
-
-    <!-- <app-account-security-form></app-account-security-form> -->
-    <app-docs-signatures></app-docs-signatures>
+    <app-new-client-identification></app-new-client-identification>
 
 
 </div>
 
- <footer>
-    <button class="btn-primary btn-medium">Iniciar nova admissão</button>
-    <button class="btn-secondary btn-medium" (click)="showInfoBlock()">Dicas para abertura da conta</button>
-</footer> 
 
- <app-side-info-block [isShowInfoBlock]="isShowInfoBlock">
+
+<app-side-info-block [isShowInfoBlock]="isShowInfoBlock">
     <h1>Checklist para <br>abertura da conta</h1>
     <p>Confira algumas dicas que irão lhe ajudar neste atendimento para que a admissão
         aconteça da melhor forma possível.
@@ -77,4 +52,4 @@
 
     <button class="btn-secondary btn-medium btn-hide-info-block" (click)="hideInfoBlock()">Continuar
         atendimento</button>
-</app-side-info-block> 
+</app-side-info-block>

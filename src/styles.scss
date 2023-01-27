@@ -33,10 +33,18 @@ button {
   align-items: center;
   width: fit-content;
   border-radius: 2px;
+  line-height: 18.75px;
   font-size: 16px;
   font-family: "Open Sans", sans-serif;
   font-weight: 600;
   cursor: pointer;
+}
+
+.page-content {
+  //estilização para manter o footer embaixo quando não houver conteúdo suficiente.
+  min-height: calc(
+    100vh - ($header-height + $footer-height + $application-content-padding)
+  );
 }
 
 .btn-primary {
@@ -107,14 +115,15 @@ button {
   height: 48px;
   padding: 0 24px;
   letter-spacing: 0;
-  line-height: 18.75px;
 }
 
 footer {
   margin: 0 -30px -30px -30px;
   display: flex;
-  padding: 20px;
+  padding: 0 20px;
   background-color: #fff;
+  height: 75px;
+  align-items: center;
 }
 
 mat-icon {
@@ -134,7 +143,6 @@ form {
   padding-bottom: 30px;
 
   .form-header {
-    margin-top: 25px;
     margin-bottom: 10px;
 
     h4 {
@@ -261,4 +269,8 @@ span.color-grey {
 
 .margin-top-15 {
   margin-top: 15px;
+}
+
+mat-horizontal-stepper {
+  background-color: inherit !important;
 }
