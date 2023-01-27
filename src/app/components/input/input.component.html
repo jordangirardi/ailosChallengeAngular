@@ -1,7 +1,8 @@
-<div class="form-input">
+<div class="form-component-input">
     <label>{{ label }}</label>
-    <div class="input-container">
-        <input (input)="handleChange()" [(ngModel)]="inputValue" placeholder="{{placeholder}}" type="{{ type }}">
-        <label class="error-message">{{ error }}</label>
+    <div class="input-component-container" [class.input-error]="showError">
+        <input mask="{{ mask }}" (input)="handleChange()" [(ngModel)]="inputValue" placeholder="{{placeholder}}"
+            type="{{ type }}">
+        <label class="secondary-label">{{ secondaryLabel }}</label>
     </div>
 </div>

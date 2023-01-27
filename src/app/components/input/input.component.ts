@@ -7,16 +7,17 @@ import { Component, Input, Output, EventEmitter } from '@angular/core';
 })
 export class InputComponent {
   @Input() label: string = '';
+  @Input() secondaryLabel: string = '';
   @Input() type: string = 'text';
+  @Input() mask: string = '';
   @Input() placeholder: string = 'Placeholder text';
-  @Input() error!: string;
+  @Input() showError: boolean = false;
 
   @Output() valueChange: EventEmitter<any> = new EventEmitter();
 
   protected inputValue: string = '';
 
   protected handleChange(): void {
-    //possíveis validações genéricas no valor do input.
     this.valueChange.emit(this.inputValue);
   }
 }
