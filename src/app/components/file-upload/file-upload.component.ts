@@ -1,6 +1,5 @@
 import { Component, Input, ViewChild, ElementRef } from '@angular/core';
 import { MatDialog } from '@angular/material/dialog';
-import { DocumentType } from 'src/app/interfaces/document-type';
 import { DocumentTypeComponent } from '../dialogs/document-type/document-type.component';
 
 @Component({
