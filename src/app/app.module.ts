@@ -35,6 +35,7 @@ import { DocumentTypeComponent } from './components/dialogs/document-type/docume
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { DocumentsDigitalizationComponent } from './components/pages/documents-digitalization/documents-digitalization.component';
 import { NewClientIdentificationComponent } from './components/pages/new-client-identification/new-client-identification.component';
+import { NgxMaskModule } from 'ngx-mask';
 
 @NgModule({
   declarations: [
@@ -75,6 +76,9 @@ import { NewClientIdentificationComponent } from './components/pages/new-client-
     ReactiveFormsModule,
     MatDialogModule,
     BrowserAnimationsModule,
+    NgxMaskModule.forRoot({
+      dropSpecialCharacters: true,
+    }),
   ],
   providers: [],
   bootstrap: [AppComponent],
