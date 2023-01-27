@@ -1,0 +1,39 @@
+<div class="page-content">
+
+    <div class="form-container">
+        <div class="form-header">
+            <H4>Informe o CPF do futuro cooperado (a)</H4>
+            <span class="secondary">Se necessário, você poderá duplicar uma conta existente ou pausar e retomar esse
+                cadastro futuramente.<br>Digite apenas os números (sem pontos ou traços).</span>
+        </div>
+
+        <div class="row">
+            <div class="row">
+                <div class="col-md-3">
+                    <app-input (valueChange)="inputChange($event)" [mask]="'000.000.000-99'" [label]="'CPF'"
+                        [secondaryLabel]="errorMessage" [showError]="showError"></app-input>
+                </div>
+                <div class="col-md-3 content-bottom">
+                    <button (click)="searchClient()" class="btn-primary btn-small no-margin">Consultar por CPF</button>
+                </div>
+            </div>
+
+            <div class="flex margin-top-15 info-container">
+                <app-card *ngFor="let infoCard of clientInfo.infoCards" [title]="infoCard.title"
+                    [subtitle]="infoCard.subtitle">
+                    <app-info-display *ngFor="let info of infoCard.infos" [title]="info.title" [info]="info.info"
+                        [icon]="info.icon"></app-info-display>
+
+                    <button (click)="searchClient()" *ngIf="infoCard.infoType == enumInfoType.account"
+                        class="btn-tertiary btn-small margin margin-top-15">Duplicar
+                        conta</button>
+                </app-card>
+            </div>
+        </div>
+    </div>
+</div>
+
+<footer>
+    <button class="btn-primary btn-medium">Iniciar nova admissão</button>
+    <button class="btn-secondary btn-medium">Dicas para abertura da conta</button>
+</footer>
