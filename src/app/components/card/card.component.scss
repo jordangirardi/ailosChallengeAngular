@@ -12,10 +12,15 @@
   width: fit-content;
   max-width: 275px;
 
-  .title {
-    font-weight: 700;
-    line-height: 16.41px;
-    color: $ailos-black;
-    margin-bottom: 15px;
+  .header-container {
+    margin-bottom: 10px;
+    display: flex;
+    flex-direction: column;
+
+    .title {
+      font-weight: 700;
+      line-height: 16.41px;
+      color: $ailos-black;
+    }
   }
 }
