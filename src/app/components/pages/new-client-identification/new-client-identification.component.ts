@@ -14,6 +14,8 @@ export class NewClientIdentificationComponent {
   protected clientCpf: string = '';
   protected clientInfo: ClientInfo = { infoCards: [] };
   protected showError: boolean = false;
+  protected isShowTips: boolean = false;
+  protected isExpandTips: boolean = false;
 
   constructor(private clientService: ClientService) {}
 
@@ -30,5 +32,17 @@ export class NewClientIdentificationComponent {
       this.errorMessage = 'CPF inválido';
       this.showError = true;
     }
+  }
+
+  protected showTips(): void {
+    this.isShowTips = true;
+  }
+
+  protected hideInfoBlock(): void {
+    this.isShowTips = false;
+  }
+
+  protected changeExtraInfo(isShow: boolean): void {
+    this.isExpandTips = isShow;
   }
 }
