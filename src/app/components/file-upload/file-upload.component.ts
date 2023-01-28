@@ -8,15 +8,13 @@ import { DocumentTypeComponent } from '../dialogs/document-type/document-type.co
   styleUrls: ['./file-upload.component.scss'],
 })
 export class FileUploadComponent {
+  @Input() fileDescription: string = 'Descrição arquivo';
   @Input() isNecessary: boolean = true;
-  @Input() isValidateDocumentType: boolean = true;
+  @Input() isValidateDocumentType: boolean = false;
 
   @ViewChild('fileInput') fileInput!: ElementRef;
 
   protected imgUploadedSrc: string = '';
-  protected necessaryText: string = this.isNecessary
-    ? 'Obrigatório'
-    : 'Opcional';
 
   constructor(private dialog: MatDialog) {}
 

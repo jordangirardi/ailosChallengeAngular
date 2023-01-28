@@ -1,7 +1,8 @@
 <div class="upload-container">
     <input #fileInput type="file" accept=".jpeg, .jpg" (change)="handleFileChange($event)">
-    <label class="file-description">descricao arquivo</label>
-    <span class="necessary-info" [class.no-necessary]="!isNecessary">{{ necessaryText }}</span>
+    <label class="file-description">{{ fileDescription }}</label>
+    <span class="necessary-info" [class.no-necessary]="!isNecessary">{{ isNecessary ? 'Obrigatório' : 'Opcional'
+        }}</span>
 
     <div (click)="confirmDocumentType()" class="drop-area">
         <img *ngIf="imgUploadedSrc !== ''" src="{{ imgUploadedSrc }}">
