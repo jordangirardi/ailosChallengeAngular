@@ -18,6 +18,7 @@ export class AccountOwnerFormComponent {
     this.createForm(this.client);
   }
 
+  //Criação do formulário utilizando o sistema mat-grid .
   protected inputs = [
     {
       type: 'text',
@@ -25,7 +26,6 @@ export class AccountOwnerFormComponent {
       colspan: 2,
       rowspan: 1,
       value: '',
-      control: new FormControl(''),
     },
     {
       type: 'text',
@@ -33,7 +33,6 @@ export class AccountOwnerFormComponent {
       colspan: 4,
       rowspan: 1,
       value: '',
-      control: new FormControl(''),
     },
     {
       type: 'text',
@@ -41,7 +40,6 @@ export class AccountOwnerFormComponent {
       colspan: 6,
       rowspan: 1,
       value: '',
-      control: new FormControl(''),
     },
     {
       type: 'text',
@@ -49,7 +47,6 @@ export class AccountOwnerFormComponent {
       colspan: 6,
       rowspan: 1,
       value: '',
-      control: new FormControl(''),
     },
     {
       type: 'text',
@@ -57,7 +54,6 @@ export class AccountOwnerFormComponent {
       colspan: 6,
       rowspan: 1,
       value: '',
-      control: new FormControl(''),
     },
     {
       type: 'text',
@@ -65,7 +61,6 @@ export class AccountOwnerFormComponent {
       colspan: 4,
       rowspan: 1,
       value: '',
-      control: new FormControl(''),
     },
     {
       type: 'text',
@@ -73,7 +68,6 @@ export class AccountOwnerFormComponent {
       colspan: 4,
       rowspan: 1,
       value: '',
-      control: new FormControl(''),
     },
     {
       type: 'text',
@@ -81,7 +75,6 @@ export class AccountOwnerFormComponent {
       colspan: 4,
       rowspan: 1,
       value: '',
-      control: new FormControl(''),
     },
   ];
 

@@ -25,6 +25,7 @@
   }
 
   .side-nav-button {
+    text-align: center;
     padding: 15px;
     display: flex;
     justify-content: center;
@@ -39,5 +40,9 @@
     .material-icons {
       font-size: 35px;
     }
+  }
+
+  .side-nav-button:hover {
+    color: $grey-4;
   }
 }

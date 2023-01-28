@@ -1,8 +1,12 @@
 import { NgModule } from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';
-import { AddClientComponent } from './components/pages/add-client/add-client.component';
+import { AllComponentsComponent } from './components/pages/all-components/all-components.component';
+import { NewClientIdentificationComponent } from './components/pages/new-client-identification/new-client-identification.component';
 
-const routes: Routes = [{ path: '', component: AddClientComponent }];
+const routes: Routes = [
+  { path: '', component: NewClientIdentificationComponent },
+  { path: 'all-components', component: AllComponentsComponent },
+];
 
 @NgModule({
   declarations: [],

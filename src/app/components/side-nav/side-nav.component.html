@@ -4,9 +4,10 @@
     </div>
     <div class="side-nav-area">
 
-        <a class="side-nav-button" *ngFor="let navItem of navItems">
+        <a class="side-nav-button" routerLink="" *ngFor="let navItem of navItems">
             <mat-icon fontIcon="{{navItem.icon}}"></mat-icon>
         </a>
+        <a class="side-nav-button" routerLink="/all-components">Paleta componentes</a>
 
     </div>
 </div>

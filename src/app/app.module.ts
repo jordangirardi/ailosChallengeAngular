@@ -12,7 +12,6 @@ import { HeaderUserActionsComponent } from './components/header-user-actions/hea
 import { MatStepperModule } from '@angular/material/stepper';
 import { SideInfoBlockComponent } from './components/side-info-block/side-info-block.component';
 import { AppRoutingModule } from './app-routing.module';
-import { AddClientComponent } from './components/pages/add-client/add-client.component';
 import { CheckboxComponent } from './components/checkbox/checkbox.component';
 import { MatCheckboxModule } from '@angular/material/checkbox';
 import { FileUploadComponent } from './components/file-upload/file-upload.component';
@@ -36,6 +35,7 @@ import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { DocumentsDigitalizationComponent } from './components/pages/documents-digitalization/documents-digitalization.component';
 import { NewClientIdentificationComponent } from './components/pages/new-client-identification/new-client-identification.component';
 import { NgxMaskModule } from 'ngx-mask';
+import { AllComponentsComponent } from './components/pages/all-components/all-components.component';
 
 @NgModule({
   declarations: [
@@ -45,7 +45,6 @@ import { NgxMaskModule } from 'ngx-mask';
     NotificationsComponent,
     HeaderUserActionsComponent,
     SideInfoBlockComponent,
-    AddClientComponent,
     CheckboxComponent,
     FileUploadComponent,
     InputComponent,
@@ -63,6 +62,7 @@ import { NgxMaskModule } from 'ngx-mask';
     DocumentTypeComponent,
     DocumentsDigitalizationComponent,
     NewClientIdentificationComponent,
+    AllComponentsComponent,
   ],
   imports: [
     BrowserModule,

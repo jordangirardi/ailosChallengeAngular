@@ -1,10 +1,12 @@
 <div class="progress-bar-container">
+    <label>Slide it</label>
+    <input type="range" [(ngModel)]="progress">
     <div class="infos">
         <label>{{ progressBarText }}</label>
         <label>{{ progress }}%</label>
     </div>
-    <div class="progress-bar">
-        <div class="progress" [style]="'width:' + progress + '%' "></div>
+    <div class="ailos-progress-bar">
+        <div class="ailos-progress" [style]="'width:' + progress + '%' "></div>
     </div>
 
 </div>

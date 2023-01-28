@@ -1,23 +1,25 @@
 @import "./src/variables.scss";
 
 .progress-bar-container {
+  background-color: #fff;
   display: flex;
   flex-direction: column;
   width: 100%;
+  padding: 25px;
 
   .infos {
     display: flex;
     justify-content: space-between;
   }
 
-  .progress-bar {
+  .ailos-progress-bar {
     margin-top: 5px;
     height: 20px;
     width: 100%;
     display: block;
     background-color: $grey-1;
 
-    .progress {
+    .ailos-progress {
       height: 100%;
       display: block;
       background-color: $ailos-blue;
